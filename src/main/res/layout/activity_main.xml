@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/iv1"
+        android:layout_width="177dp"
+        android:layout_height="126dp"
+        android:layout_marginTop="170dp"
+        android:contentDescription="@string/logo"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/corpochivor" />
+
+    <Button
+        android:id="@+id/medir"
+        android:layout_width="130dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="80dp"
+        android:text="@string/nm"
+        app:backgroundTint="#07599D"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv1" />
+
+    <Button
+        android:id="@+id/history"
+        android:layout_width="130dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="70dp"
+        android:text="@string/hm"
+        app:backgroundTint="#07599D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/medir"
+        app:layout_constraintTop_toBottomOf="@+id/iv1" />
+
+    <Button
+        android:id="@+id/colecc"
+        android:layout_width="130dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="25dp"
+        android:onClick="Gallery"
+        android:text="@string/ci"
+        app:backgroundTint="#07599D"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medir" />
+
+    <Button
+        android:id="@+id/guia"
+        android:layout_width="130dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="70dp"
+        android:text="@string/cm"
+        app:backgroundTint="#07599D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/history" />
+</androidx.constraintlayout.widget.ConstraintLayout>

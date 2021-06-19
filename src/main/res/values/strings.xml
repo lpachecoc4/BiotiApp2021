@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BiotiApp2021</string>
+    <string name="ci">Colección de Imágenes</string>
+    <string name="logo">logo</string>
+    <string name="nm">Nueva Medición</string>
+    <string name="hm">Historial Mediciones</string>
+    <string name="cm">¿Cómo medir?</string>
+
+
+</resources>
