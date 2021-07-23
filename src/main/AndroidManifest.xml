@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BiotiApp2021">
-        <activity android:name=".DescriptionActivity"></activity>
+        <activity android:name=".Measure0"></activity>
+        <activity android:name=".MeasureF" />
+        <activity android:name=".Agregar" />
+        <activity android:name=".ConCasa" />
+        <activity android:name=".Measure1" />
+        <activity android:name=".DescriptionActivity" />
         <activity android:name=".Gallery" />
         <activity android:name=".MainActivity">
             <intent-filter>
