@@ -1,9 +1,13 @@
 package com.example.biotiapp;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.EventLogTags;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -15,6 +19,7 @@ import java.util.List;
 public class Gallery extends AppCompatActivity {
 
     List<ListElement> elements;
+    DBHelper DB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +30,24 @@ public class Gallery extends AppCompatActivity {
 
     }
 
+    public ListElement createItem(String name){
+        DB = new DBHelper(this);
+        String tscale = DB.getScale(name);
+        int scale = Integer.parseInt(tscale);
+        String tpos = DB.getPos(name);
+        return new ListElement(name,scale,tpos);
+    }
+
+
     public void init(){
+        //DB = new DBHelper(this);
         elements = new ArrayList<>();
-        elements.add(new ListElement("Aeshnidae", 6, R.drawable.aeshnidaem));
-        elements.add(new ListElement("Baetidae", 4, R.drawable.baetidae));
+        elements.add(new ListElement("Aeshnidae",this));
+        ListElement element1 = createItem("Baetidae");
+        elements.add(element1);
+
+        //elements.add(new ListElement("Aeshnidae", 6, R.drawable.aeshnidaem));
+        //elements.add(new ListElement("Baetidae", 4, R.drawable.baetidae));
         elements.add(new ListElement("Blepharoceridae", 10, R.drawable.blepharoceridae));
         elements.add(new ListElement("Calamoceratidae", 10, R.drawable.calamoceridae));
         elements.add(new ListElement("Ceratopogonidae", 4, R.drawable.ceratopogonidae));
@@ -80,7 +99,6 @@ public class Gallery extends AppCompatActivity {
         elements.add(new ListElement("Thiaridae", 3, R.drawable.thiaridaem));
         elements.add(new ListElement("Tipulidae", 5, R.drawable.tipulidae));
         elements.add(new ListElement("Xiphocentronidae", 8, R.drawable.xiphocentronidaem));
-
 
         ListAdapter listAdapter = new ListAdapter(elements, this, new ListAdapter.OnItemClickListener() {
             @Override
