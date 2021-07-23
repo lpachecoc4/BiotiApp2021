@@ -5,6 +5,19 @@
     <string name="nm">Nueva Medición</string>
     <string name="hm">Historial Mediciones</string>
     <string name="cm">¿Cómo medir?</string>
+    <string name="casa">¿Con casa?</string>
+    <string name="concasa">Con casa</string>
+    <string name="sincasa">Sin casa</string>
+    <string name="cantidad">Cantidad</string>
+    <string name="agregar">Agregar</string>
+    <string name="medir">Medir</string>
+    <string name="nombre">Nombre</string>
+    <string name="fecha">Fecha</string>
+    <string name="hora">Hora</string>
+    <string name="ubi">Ubicación</string>
+    <string name="sm">Seleccionar Macroinvertebrados</string>
+    <string name="cod">Código</string>
+    <string name="cal">Calcular</string>
 
 
 </resources>
