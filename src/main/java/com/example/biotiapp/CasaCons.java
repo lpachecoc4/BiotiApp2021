@@ -5,32 +5,30 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ConCasa extends AppCompatActivity {
+public class CasaCons extends AppCompatActivity {
 
     List<ListElement> elements;
-    DBHelper DB;
     List<String> conchas;
     TextView tname;
     ArrayList<String> names;
     private String nameM;
     String[] measureData;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_con_casa);
+        setContentView(R.layout.activity_casa_cons);
 
         init();
 
-        tname = (TextView)findViewById(R.id.textViewName3);
+        tname = (TextView)findViewById(R.id.textViewName4);
 
         measureData = (String[]) getIntent().getSerializableExtra("measureData");
         nameM = measureData[0];
@@ -40,35 +38,20 @@ public class ConCasa extends AppCompatActivity {
 
     }
 
-    public ListElement createItem(String name){
-        DB = new DBHelper(this);
-        String tscale = DB.getScale(name);
-        String tpos = DB.getPos(name);
-        return new ListElement(name,tscale,tpos);
-    }
-
 
     public void init(){
         conchas = new ArrayList<>();
         elements = new ArrayList<>();
 
-        conchas.add("Lymnaeidae");
-        conchas.add("Ostrachoda");
-        conchas.add("Physidae");
-        conchas.add("Planorbidae");
-        conchas.add("Sphaeriidae");
-        conchas.add("Thiaridae");
+        conchas.add("Calamoceratidae");
+        conchas.add("Helicopsychidae");
+        conchas.add("Hydroptilidae");
+        conchas.add("Leptoceridae");
+        conchas.add("Odontoceridae");
 
         for (int i = 0; i < conchas.size(); i++){
             elements.add(new ListElement(conchas.get(i),this));
         }
-        /*
-        elements.add(new ListElement("Lymnaeidae", 3, R.drawable.lymnaeidaem));
-        elements.add(new ListElement("Ostrachoda", 3, R.drawable.ostracodam));
-        elements.add(new ListElement("Physidae", 3, R.drawable.physidaem));
-        elements.add(new ListElement("Planorbidae", 3, R.drawable.planorbidaem));
-        elements.add(new ListElement("Sphaeriidae", 3, R.drawable.sphaeriidaem));
-        elements.add(new ListElement("Thiaridae", 3, R.drawable.thiaridaem));*/
 
         ListAdapter listAdapter = new ListAdapter(elements, this, new ListAdapter.OnItemClickListener() {
             @Override
@@ -91,6 +74,4 @@ public class ConCasa extends AppCompatActivity {
         intent.putStringArrayListExtra("names",names);
         startActivity(intent);
     }
-
-
 }

@@ -16,6 +16,7 @@ public class Measure0 extends AppCompatActivity {
     private EditText etNameM;
     private EditText etDate;
     private EditText etTime;
+    private String[] measureData;
 
 
 
@@ -43,6 +44,11 @@ public class Measure0 extends AppCompatActivity {
         String date = etDate.getText().toString();
         String time = etTime.getText().toString();
 
+        measureData = new String[3];
+        measureData[0] = nameM;
+        measureData[1] = date;
+        measureData[2] = time;
+
 
         if(!nameM.isEmpty() && !date.isEmpty() && !time.isEmpty()){
             ContentValues registro = new ContentValues();
@@ -58,9 +64,8 @@ public class Measure0 extends AppCompatActivity {
             Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(this, MeasureF.class);
-            intent.putExtra("nameM",nameM);
             intent.putExtra("isAdded",false);
-            //intent.putExtra("item",null);
+            intent.putExtra("measureData",measureData);
             startActivity(intent);
 
         } else{

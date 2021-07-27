@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -12,12 +13,17 @@ import android.os.Message;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     List<ListElement> elements;
+    ArrayList<String> prueba;
     DBHelper DB;
 
     @Override
@@ -37,23 +43,15 @@ public class MainActivity extends AppCompatActivity {
         startActivity(measure0);
     }
 
-    public void Prueba(View view){
-        String scale = DB.getScale("Aeshnidae");
-        int x = Integer.parseInt(scale);
-        String y = String.valueOf(x);
-        Toast.makeText(MainActivity.this, y, Toast.LENGTH_SHORT).show();
-        /*
-        Cursor res = DB.getData();
-        StringBuffer buffer = new StringBuffer();
-        buffer.append(res.getString(0)+"\n");
+    public void History(View view){
+        Intent i = new Intent(this,Mediciones.class);
+        startActivity(i);
+    }
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-        builder.setCancelable(true);
-        builder.setTitle("Entries");
-        builder.setMessage(buffer.toString());
-        builder.show();
-*/
-        //buffer.append(res.)
+    public void Prueba(View view){
+        Intent i = new Intent(this,Tutorial.class);
+        startActivity(i);
+
     }
 
 
@@ -104,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         elements.add(new ListElement("Psephenidae", 5, R.drawable.psephenidae));
         elements.add(new ListElement("Psychodidae", 3, R.drawable.psychodidae));
         elements.add(new ListElement("Scirtidae", 5, R.drawable.scirtidae));
-        elements.add(new ListElement("Sialidea", 6, R.drawable.sialidaem));
+        elements.add(new ListElement("Sialidae", 6, R.drawable.sialidaem));
         elements.add(new ListElement("Simuliidae", 5, R.drawable.simuliidae));
         elements.add(new ListElement("Sphaeriidae", 3, R.drawable.sphaeriidaem));
         elements.add(new ListElement("Stratiomidae", 4, R.drawable.stratiomidae));
@@ -115,6 +113,9 @@ public class MainActivity extends AppCompatActivity {
         elements.add(new ListElement("Xiphocentronidae", 8, R.drawable.xiphocentronidaem));
 
         DB = new DBHelper(this);
+        DB.clearDatabase("Userdetails");
+        //this.deleteDatabase("Userdetails");
+        //Toast.makeText(MainActivity.this, String.valueOf(this.deleteDatabase("UserDetails")), Toast.LENGTH_SHORT).show();
         Boolean checkinsertdata = false;
         Cursor res = DB.getData();
         if(res.getCount()==0){
@@ -122,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
                 checkinsertdata = DB.insertuserdata(elements.get(i).getName(),elements.get(i).getScale(),elements.get(i).getImagePos());
             }
         }
-        if(checkinsertdata==true || res.getCount()!=0)
+        if(checkinsertdata|| res.getCount()!=0)
             Toast.makeText(MainActivity.this, "Datos cargados correctamente", Toast.LENGTH_SHORT).show();
         else
             Toast.makeText(MainActivity.this, "Los datos no fueron cargados", Toast.LENGTH_SHORT).show();
