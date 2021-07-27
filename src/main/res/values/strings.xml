@@ -8,6 +8,7 @@
     <string name="casa">¿Con casa?</string>
     <string name="concasa">Con casa</string>
     <string name="sincasa">Sin casa</string>
+    <string name="patas">¿Con patas?</string>
     <string name="cantidad">Cantidad</string>
     <string name="agregar">Agregar</string>
     <string name="medir">Medir</string>
@@ -18,6 +19,21 @@
     <string name="sm">Seleccionar Macroinvertebrados</string>
     <string name="cod">Código</string>
     <string name="cal">Calcular</string>
+    <string name="tipocasa">Tipo de Casa</string>
+    <string name="casalisa">Casa Lisa</string>
+    <string name="casacons">Casa Construida</string>
+    <string name="sinpatas">Sin Patas</string>
+    <string name="conpatas">Con Patas</string>
+    <string name="lisos">Como Gusanos Lisos</string>
+    <string name="concosas">Con Protuberancias y Colas</string>
+    <string name="araña">Como Araña</string>
+    <string name="camaron">Como Camarón</string>
+    <string name="ciempies">Como Ciempiés</string>
+    <string name="ojosgrandes">Ojos Grandes y Patas Largas</string>
+    <string name="colas">Varias colas</string>
+    <string name="uñas">Uñas al Final del Cuerpo</string>
+    <string name="cuernos">Cabeza con Cuernos</string>
+    <string name="patasuñas">Patas con Uñas</string>
 
 
 </resources>
