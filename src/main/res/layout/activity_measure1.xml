@@ -10,7 +10,7 @@
         android:id="@+id/textViewm1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="192dp"
+        android:layout_marginTop="130dp"
         android:text="@string/casa"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,6 +24,7 @@
         android:layout_marginTop="90dp"
         android:onClick="ConCasa"
         android:text="@string/concasa"
+        app:backgroundTint="#07599D"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewm1" />
@@ -33,7 +34,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
+        android:onClick="SinCasa"
         android:text="@string/sincasa"
+        app:backgroundTint="#07599D"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sicasa" />

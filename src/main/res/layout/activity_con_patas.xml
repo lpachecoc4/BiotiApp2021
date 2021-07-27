@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConPatas">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/nombre"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewName9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewm4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/conpatas"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <Button
+        android:id="@+id/araña"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:onClick="ComoAraña"
+        android:text="@string/araña"
+        app:backgroundTint="#07599D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewm4" />
+
+    <Button
+        android:id="@+id/ciempies"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:onClick="Ciempies"
+        android:text="@string/ciempies"
+        app:backgroundTint="#07599D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/camaron" />
+
+    <Button
+        android:id="@+id/ojosgrandes"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:onClick="OjosGrandes"
+        android:text="@string/ojosgrandes"
+        app:backgroundTint="#07599D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ciempies" />
+
+    <Button
+        android:id="@+id/uñascuerpo"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:onClick="UnasCuerpo"
+        android:text="@string/uñas"
+        app:backgroundTint="#07599D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colas" />
+
+    <Button
+        android:id="@+id/colas"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:onClick="Colas"
+        android:text="@string/colas"
+        app:backgroundTint="#07599D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ojosgrandes" />
+
+    <Button
+        android:id="@+id/patasuñas"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:onClick="PatasUnas"
+        android:text="@string/patasuñas"
+        app:backgroundTint="#07599D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cuernos" />
+
+    <Button
+        android:id="@+id/cuernos"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:onClick="Cuernos"
+        android:text="@string/cuernos"
+        app:backgroundTint="#07599D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uñascuerpo" />
+
+    <Button
+        android:id="@+id/camaron"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:onClick="ComoCamaron"
+        android:text="@string/camaron"
+        app:backgroundTint="#07599D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/araña" />
+</androidx.constraintlayout.widget.ConstraintLayout>

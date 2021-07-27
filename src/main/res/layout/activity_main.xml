@@ -38,6 +38,7 @@
         android:layout_marginTop="80dp"
         android:layout_marginEnd="70dp"
         android:layout_marginRight="70dp"
+        android:onClick="History"
         android:text="@string/hm"
         app:backgroundTint="#07599D"
         app:layout_constraintEnd_toEndOf="parent"

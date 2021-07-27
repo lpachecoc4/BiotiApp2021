@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    app:cardCornerRadius="28dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp">
+
+        <TextView
+            android:id="@+id/TextViewNameM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:text="Medición X"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="4dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            >
+
+            <TextView
+                android:id="@+id/textViewFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:textSize="18dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:text="Fecha: "
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/textViewDateM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:textSize="18dp"
+                android:text="21-12-2010"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/textViewHora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="2dp"
+                android:textSize="18dp"
+                android:text="Hora: "
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/textViewTimeM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:textSize="18dp"
+                android:text="21:12"
+                android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp">
+
+            <TextView
+                android:id="@+id/textViewIndice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="2dp"
+                android:textSize="18dp"
+                android:text="Medición BMWP: "
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/textViewInd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="2dp"
+                android:textSize="18dp"
+                android:text="550"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp">
+
+            <TextView
+                android:id="@+id/textViewResultado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:textSize="18dp"
+                android:text="Resultado: "
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/textViewResult1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:textSize="18dp"
+                android:text="Muy contaminado"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+

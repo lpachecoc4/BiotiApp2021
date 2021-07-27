@@ -64,7 +64,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="81dp"
         android:layout_marginRight="81dp"
-        android:text="@string/concasa"
+        android:text="@string/casalisa"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#0059A8"
         android:textSize="24sp"
